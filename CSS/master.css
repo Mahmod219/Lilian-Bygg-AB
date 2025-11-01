@@ -246,23 +246,15 @@ a {
 
 .header .navbar {
   display: flex;
-  gap: 30px;
   position: relative;
 
-}
-
-.header ul .list:not(:last-child) {
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-.header ul li{
-  transition: var(--main-transition);
 }
 
 
 .header ul li a {
   font-size: 22px;
   color: #2e4453;
-  padding: 8px 12px;
+  padding: 8px 22px;
   transition: color var(--main-transition);
 }
 
@@ -314,6 +306,10 @@ a {
 
 .header .mega ul li {
   padding: 18px 0;
+  transition: var(--main-transition) ease-in;
+}
+.header .mega ul li:hover {
+  background-color: #e1e8ed;
 }
 .header .mega ul li a {
   color: #2e4453;
@@ -344,10 +340,19 @@ a {
   font-weight: 900;
   font-family: "Font Awesome 5 Free", Arial, sans-serif;
   color: var(--main-color-alt);
+  font-size: 32px;
 }
 /* =============================
    Responsive Design
 ============================= */
+@media (max-width: 991px) {
+  .header .mega {
+   
+    right: 0;
+  }
+
+}
+
 @media (max-width: 768px) {
   .header .container {
     flex-wrap: wrap;
@@ -355,7 +360,13 @@ a {
     justify-content: space-between;
     height: 80px;
   }
+  .header ul li  {
   
+    padding: 14px 0;
+  }
+  .header ul li a{
+    padding: 5px 10px;
+  }
   .header .container img {
     margin-left: 15px;
   }
@@ -372,7 +383,7 @@ a {
     left: -100%;
     width: 75%;
     height: 83vh;
-    background-color: white;
+    background-color: var(--section-color);
     padding: 20px;
     transition: left 0.3s ease;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
@@ -390,6 +401,8 @@ a {
 
   .navbar li {
     font-size: 20px;
+    padding: 15px 0px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
   }
 
   .header .mega {
@@ -406,7 +419,10 @@ a {
     width: 100%;
   }
 
-  .header ul .list {
+  .header ul li{
+    padding: 12px 0;
+  }
+  .header ul li:not(:last-child) {
     border-bottom: 1px solid rgba(0,0,0,0.1);
   }
 
@@ -432,12 +448,8 @@ a {
   }
 }
 
-@media (max-width: 991px) {
-  .header .mega {
-    /* Override right: 50% from desktop to align mega menu to the right edge on smaller screens */
-    right: 0;
-  }
-}
+
+
 
 
 /* Start landing */

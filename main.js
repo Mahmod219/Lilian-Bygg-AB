@@ -2,7 +2,14 @@ const toggle = document.getElementById('menu-toggle');
 const navbar = document.getElementById('navbar');
 const tjansterBtn = document.getElementById('tjanster-btn');
 const megaMenu = document.getElementById('mega-menu');
-const megaParent = document.getElementById('mega-parent');
+const megaParent = document.getElementById( 'mega-parent' );
+ // main.js (script loaded after the DOM element)
+            const logo = document.getElementById('mainlogo'); 
+            logo.addEventListener('click', () => {
+                window.location.href = 'index.html';
+            });
+           
+            
 
 const closeMega = () => {
     if (megaParent) megaParent.classList.remove('mega-open');
